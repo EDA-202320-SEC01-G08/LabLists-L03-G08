@@ -67,7 +67,7 @@ def loadBooks(catalog):
     referencia al libro que se esta procesando.
     """
     booksfile = cf.data_dir + 'GoodReads/books-small.csv'
-    input_file = csv.DictReader(open(booksfile, encoding='utf-8'))
+    input_file = csv.DictReader(open(booksfile, encoding='utf-8')) # Se esta convirtiendo el archivo .csv a diccionario.
     for book in input_file:
         model.addBook(catalog, book)
     return model.bookSize(catalog), model.authorSize(catalog)

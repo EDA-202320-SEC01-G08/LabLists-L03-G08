@@ -159,10 +159,10 @@ def getBestBooks(catalog, number):
     """
     Retorna los mejores libros
     """
-    books = catalog['books']
-    bestbooks = lt.newList()
-    for cont in range(1, number+1):
-        book = lt.getElement(books, cont)
+    books = catalog['books'] # Llamar el elemento "books" en lalista catalog
+    bestbooks = lt.newList() # Crea una nueva lista "bestbooks"
+    for cont in range(1, number+1): # Recorre la lista
+        book = lt.getElement(books, cont) # Añade un elemento
         lt.addLast(bestbooks, book)
     return bestbooks
 
